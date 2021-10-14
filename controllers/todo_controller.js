@@ -15,7 +15,7 @@ module.exports.getSingleTodo = async (req, res) => {
 	if (!mongoose.Types.ObjectId.isValid(tid))
 		return sendError(res, "Invalid Id", BAD_REQUEST);
 	// uid is used querying so that one user can access only their own todo
-	let todo = await Todo.find({ _id: tid, uid: req.user.id });
+	let todo = await Todo.findOne({ _id: tid, uid: req.user.id });
 	if (!todo) return sendError(res, "Todo Not found!!", NOT_FOUND);
 	sendSuccess(res, todo);
 };

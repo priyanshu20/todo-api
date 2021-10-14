@@ -1,6 +1,6 @@
 # Todo-API
 
-A simple todo application 
+A simple todo application
 
-deployed here
-documentation here
+deployed [here](https://todo-api-task.herokuapp.com/)
+documentation [here](https://documenter.getpostman.com/view/15524790/UV5UkK6f)
